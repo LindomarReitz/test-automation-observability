@@ -6,6 +6,6 @@ services:
     ports:
       - 9090:9090
   pushgateway:
-    image: prom/prometheus
+    image: prom/pushgateway
     ports:
-      - 9095:9095
+      - 9091:9091
