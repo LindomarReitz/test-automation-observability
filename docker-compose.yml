@@ -1,6 +1,12 @@
 version: "3"
 
 services:
+  dotnet:
+    image: mcr.microsoft.com/dotnet/sdk:6.0-alpine3.14
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: tail -f /dev/null
   prometheus:
     image: prom/prometheus
     volumes:
